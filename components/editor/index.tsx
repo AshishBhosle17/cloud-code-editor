@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import { X } from "lucide-react";
 import { Editor, OnMount } from "@monaco-editor/react";
 import monaco from "monaco-editor";
+import Sidebar from "./sidebar";
 
 const CodeEditor = () => {
   const editorRef = useRef<null | monaco.editor.IStandaloneCodeEditor>(null);
@@ -19,6 +20,7 @@ const CodeEditor = () => {
   };
   return (
     <>
+      <Sidebar />
       <div className="h-full w-52"></div>
       <ResizablePanelGroup direction="horizontal">
         <ResizablePanel
